@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -17,27 +18,43 @@ const Navbar = () => {
               viewBox='0 0 24 24'>
               <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
             </svg>
-            <span class='ml-3 text-xl'>Tailblocks</span>
+            <span class='ml-3 text-xl'>Web Dev Quiz</span>
           </a>
           <nav class='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-            <a class='mr-5 hover:text-gray-900'>First Link</a>
-            <a class='mr-5 hover:text-gray-900'>Second Link</a>
-            <a class='mr-5 hover:text-gray-900'>Third Link</a>
-            <a class='mr-5 hover:text-gray-900'>Fourth Link</a>
+            <NavLink
+              to='/topics'
+              aria-label='Topics'
+              title='Topics'
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
+              }>
+              Topics
+            </NavLink>
+            <NavLink
+              to='/statistics'
+              aria-label='statistics'
+              title='statistics'
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
+              }>
+              Statistics
+            </NavLink>
+            <NavLink
+              to='/blog'
+              aria-label='blog'
+              title='blog'
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
+              }>
+              Blog
+            </NavLink>
           </nav>
-          <button class='inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
-            Button
-            <svg
-              fill='none'
-              stroke='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              class='w-4 h-4 ml-1'
-              viewBox='0 0 24 24'>
-              <path d='M5 12h14M12 5l7 7-7 7'></path>
-            </svg>
-          </button>
         </div>
       </header>
     </div>
