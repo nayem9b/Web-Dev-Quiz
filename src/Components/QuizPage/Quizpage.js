@@ -18,8 +18,10 @@ const Quizpage = () => {
   //   const { name } = params;
   return (
     <div>
-      <h1>This is quiz page</h1>
-      <h1>Quiz of {name}</h1>
+      <h1 className='text-2xl'>
+        Quiz of{" "}
+        <span className='text-3xl font-bold text-purple-500'>{name}</span>
+      </h1>
       {questions.map((reletedqdata) => (
         <QuizCard reletedqdata={reletedqdata} key={reletedqdata.id}></QuizCard>
       ))}

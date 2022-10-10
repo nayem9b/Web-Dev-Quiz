@@ -1,0 +1,11 @@
+.position {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+.radiobox {
+  display: flex;
+  flex-direction: row-reverse;
+}
