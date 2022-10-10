@@ -13,7 +13,7 @@ const Quizpage = () => {
 
   const { name, id, questions } = qdata;
 
-  console.log(qdata);
+  //   console.log(qdata);
   //   const params = useParams();
   //   const { name } = params;
   return (

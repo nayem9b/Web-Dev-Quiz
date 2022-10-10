@@ -1,8 +1,9 @@
 import React from "react";
+import OptionCard from "../OptionCard/OptionCard";
 
 const QuizCard = ({ reletedqdata }) => {
   console.log(reletedqdata);
-  const { question } = reletedqdata;
+  const { question, options } = reletedqdata;
   return (
     <div>
       <h1> {question} </h1>
@@ -16,6 +17,9 @@ const QuizCard = ({ reletedqdata }) => {
             checked
           />
         </label>
+        {options.map((optiondata) => (
+          <OptionCard optiondata={optiondata}></OptionCard>
+        ))}
       </div>
     </div>
   );
