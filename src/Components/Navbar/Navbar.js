@@ -22,7 +22,7 @@ const Navbar = () => {
           </a>
           <nav class='md:ml-auto flex flex-wrap items-center text-base justify-center'>
             <NavLink
-              to='/topics'
+              to='/'
               aria-label='Topics'
               title='Topics'
               className={({ isActive }) =>

@@ -1,8 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Card = ({ quizdt }) => {
-  const { logo, name, total } = quizdt;
+  const { logo, name, total, id } = quizdt;
 
   return (
     <div className='card w-96 bg-base-100 shadow-xl'>
@@ -13,13 +13,11 @@ const Card = ({ quizdt }) => {
         <h2 className='card-title'>{name}</h2>
         <p>Total Quiz: {total}</p>
         <div className='card-actions'>
-          <NavLink
-            to={name}
-            aria-label=''
-            title=''
-            className='inline-flex items-center justify-center w-full mb-2 btn border-none btn-lg sm:w-auto sm:mb-0 text-white bg-orange-400 hover:text-black hover:bg-orange-400'>
-            Start Quiz
-          </NavLink>
+          <Link to={`/${id}`}>
+            <button className='inline-flex items-center justify-center w-full mb-2 btn border-none btn-lg sm:w-auto sm:mb-0 text-white bg-orange-400 hover:text-black hover:bg-orange-400'>
+              Show Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
