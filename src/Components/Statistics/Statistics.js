@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
+import { useLoaderData } from "react-router-dom";
 import {
-  LineChart,
-  Line,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -55,36 +56,64 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = "https://codesandbox.io/s/simple-line-chart-kec3v";
+const getIntroOfPage = (label) => {
+  if (label === "Page A") {
+    return "Page A is about men's clothing";
+  }
+  if (label === "Page B") {
+    return "Page B is about women's dress";
+  }
+  if (label === "Page C") {
+    return "Page C is about women's bag";
+  }
+  if (label === "Page D") {
+    return "Page D is about household goods";
+  }
+  if (label === "Page E") {
+    return "Page E is about food";
+  }
+  if (label === "Page F") {
+    return "Page F is about baby food";
+  }
+  return "";
+};
 
-  render() {
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
     return (
-      <ResponsiveContainer width='100%' height='100%'>
-        <LineChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}>
-          <CartesianGrid strokeDasharray='3 3' />
-          <XAxis dataKey='name' />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line
-            type='monotone'
-            dataKey='pv'
-            stroke='#8884d8'
-            activeDot={{ r: 8 }}
-          />
-          <Line type='monotone' dataKey='uv' stroke='#82ca9d' />
-        </LineChart>
-      </ResponsiveContainer>
+      <div className='custom-tooltip'>
+        <p className='label'>{`${label} : ${payload[0].value}`}</p>
+        <p className='intro'>{getIntroOfPage(label)}</p>
+      </div>
     );
   }
+
+  return null;
+};
+
+export default function Statistics() {
+  const loaderData = useLoaderData();
+  const QuizData = loaderData.data;
+  console.log(QuizData);
+  return (
+    <ResponsiveContainer width='50%' aspect={2}>
+      <BarChart
+        width={500}
+        height={300}
+        data={QuizData}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}>
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='name' />
+        <YAxis />
+        <Tooltip content={<CustomTooltip />} />
+        <Legend />
+        <Bar dataKey='total' barSize={20} fill='#8884d8' />
+      </BarChart>
+    </ResponsiveContainer>
+  );
 }
