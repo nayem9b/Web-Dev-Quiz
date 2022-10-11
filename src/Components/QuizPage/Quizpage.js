@@ -1,26 +1,23 @@
 import React from "react";
-import {
-  Navigate,
-  useLoaderData,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import QuizCard from "../QuizCard/QuizCard";
 
 const Quizpage = () => {
   const loaderData = useLoaderData();
   const qdata = loaderData.data;
 
-  const { name, id, questions } = qdata;
+  const { name, id, questions, total } = qdata;
+  console.log(qdata);
 
-  //   console.log(qdata);
-  //   const params = useParams();
-  //   const { name } = params;
   return (
     <div>
       <h1 className='text-2xl'>
         Quiz of{" "}
         <span className='text-3xl font-bold text-purple-500'>{name}</span>
+      </h1>
+      <h1 className='mt-8 text-lg'>
+        Number of questions{" "}
+        <span className=' text-2xl text-purple-500 font-bold'>{total}</span>{" "}
       </h1>
       {questions.map((reletedqdata) => (
         <QuizCard reletedqdata={reletedqdata} key={reletedqdata.id}></QuizCard>

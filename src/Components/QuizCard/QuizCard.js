@@ -1,5 +1,5 @@
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import OptionCard from "../OptionCard/OptionCard";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,8 +21,8 @@ const QuizCard = ({ reletedqdata }) => {
 
   return (
     <div>
-      <div className=' grid grid-cols-1 my-5 card lg:w-[900px] sm:w-auto md:auto bg-base-100 shadow-xl'>
-        <div className='card-body'>
+      <div className=' grid grid-cols-1 my-5 card lg:w-[900px] sm:w-auto md:auto bg-base-100 lg:ml-80  justify-center items-center shadow-xl'>
+        <div className='card-body '>
           <div className='flex justify-between'>
             <h2 className='card-title text-purple-500'>{question}</h2>
             <button
@@ -37,11 +37,6 @@ const QuizCard = ({ reletedqdata }) => {
               <ToastContainer />
             </button>
           </div>
-
-          {/* <div>
-            <button onClick={notify}>Notify !</button>
-            <ToastContainer />
-          </div> */}
 
           {options.map((optiondata) => (
             <OptionCard
