@@ -14,7 +14,7 @@ const Card = ({ quizdt }) => {
         <p>Total Quiz: {total}</p>
         <div className='card-actions'>
           <Link to={`/${id}`}>
-            <button className='inline-flex items-center justify-center w-full mb-2 btn border-none btn-lg sm:w-auto sm:mb-0 text-white bg-orange-400 hover:text-black hover:bg-orange-400'>
+            <button className='inline-flex items-center justify-center w-full mb-2 btn border-none btn-md sm:w-auto sm:mb-0 text-white bg-red-500 hover:bg-red-600'>
               Show Details
             </button>
           </Link>

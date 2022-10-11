@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Reshob from "../../images/Reshob.jpg";
 
 const Header = () => {
@@ -111,14 +112,16 @@ const Header = () => {
               </div>
               <p class='leading-relaxed'>
                 Enthusiastic about web development. I have learnt HTML, CSS,
-                JavaScript, BootStrap, Tailwind and React these far. I'm also
-                familiar to chrome devtools and DOM manipulation
+                JavaScript, BootStrap, Tailwind and React this far. I'm also
+                familiar to chrome devtools and DOM manipulation.
               </p>
 
-              <div class='flex'>
-                <button class='flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded'>
-                  Button
-                </button>
+              <div class='flex mt-4'>
+                <a
+                  className='flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded'
+                  href='https://www.linkedin.com/in/the-razwan-niam'>
+                  <button>Resume</button>
+                </a>
                 <button class='rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4'>
                   <svg
                     fill='currentColor'
