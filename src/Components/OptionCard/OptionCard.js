@@ -5,9 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const OptionCard = ({ optiondata, correctAnswer }) => {
+  let [count, setcount] = useState(0);
   const checkAnswer = () => {
     if (optiondata === correctAnswer) {
       toast.success("You got it Right");
+      setcount(count + 1);
+      console.log(count);
     } else {
       toast.error("You got it Wrong");
     }

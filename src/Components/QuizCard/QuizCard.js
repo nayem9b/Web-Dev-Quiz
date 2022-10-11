@@ -21,25 +21,27 @@ const QuizCard = ({ reletedqdata }) => {
 
   return (
     <div>
-      <div className=' grid my-5 card w-[900px] bg-base-100 shadow-xl'>
+      <div className=' grid grid-cols-1 my-5 card lg:w-[900px] sm:w-auto md:auto bg-base-100 shadow-xl'>
         <div className='card-body'>
-          <button
-            onClick={() =>
-              Toast.fire({
-                icon: "success",
-                title: correctAnswer,
-              })
-            }>
-            {" "}
-            <FontAwesomeIcon className='mt-2' icon={faEye} />
-            <ToastContainer />
-          </button>
+          <div className='flex justify-between'>
+            <h2 className='card-title text-purple-500'>{question}</h2>
+            <button
+              onClick={() =>
+                Toast.fire({
+                  icon: "success",
+                  title: correctAnswer,
+                })
+              }>
+              {" "}
+              <FontAwesomeIcon className='mt-2 order-last' icon={faEye} />
+              <ToastContainer />
+            </button>
+          </div>
+
           {/* <div>
             <button onClick={notify}>Notify !</button>
             <ToastContainer />
           </div> */}
-
-          <h2 className='card-title text-purple-500'>{question}</h2>
 
           {options.map((optiondata) => (
             <OptionCard

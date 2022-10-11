@@ -9,9 +9,11 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-      {QuizData.map((quizdt) => (
-        <Card key={quizdt.total} quizdt={quizdt}></Card>
-      ))}
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center items-center'>
+        {QuizData.map((quizdt) => (
+          <Card key={quizdt.total} quizdt={quizdt}></Card>
+        ))}
+      </div>
     </div>
   );
 };

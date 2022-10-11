@@ -1,4 +1,5 @@
 import React from "react";
+import Reshob from "../../images/Reshob.jpg";
 
 const Header = () => {
   return (
@@ -8,8 +9,8 @@ const Header = () => {
           <div class='lg:w-4/5 mx-auto flex flex-wrap'>
             <img
               alt='ecommerce'
-              class='lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded'
-              src='https://dummyimage.com/400x400'
+              class='lg:w-1/2 w-full lg:h-auto h-64 rounded-full object-cover object-center '
+              src={Reshob}
             />
             <div class='lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0'>
               <h2 class='text-sm title-font text-gray-500 tracking-widest'>
@@ -109,12 +110,9 @@ const Header = () => {
                 </span>
               </div>
               <p class='leading-relaxed'>
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
+                Enthusiastic about web development. I have learnt HTML, CSS,
+                JavaScript, BootStrap, Tailwind and React these far. I'm also
+                familiar to chrome devtools and DOM manipulation
               </p>
 
               <div class='flex'>

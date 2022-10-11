@@ -5,9 +5,9 @@ const Card = ({ quizdt }) => {
   const { logo, name, total, id } = quizdt;
 
   return (
-    <div className='card w-96 bg-base-100 shadow-xl'>
+    <div className='card w-96 bg-base-100 shadow-xl mt-6'>
       <figure className='px-10 pt-10'>
-        <img src={logo} alt='Shoes' className='rounded-xl' />
+        <img src={logo} alt={name} className='rounded-xl' />
       </figure>
       <div className='card-body items-center text-center'>
         <h2 className='card-title'>{name}</h2>
