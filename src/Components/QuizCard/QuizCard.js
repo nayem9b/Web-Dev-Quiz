@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Swal from "sweetalert2";
 const QuizCard = ({ reletedqdata }) => {
   const { question, options, correctAnswer } = reletedqdata;
-  const notify = () => toast("Wow so easy!");
+
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -42,13 +42,12 @@ const QuizCard = ({ reletedqdata }) => {
           <h2 className='card-title text-purple-500'>{question}</h2>
 
           {options.map((optiondata) => (
-            <OptionCard optiondata={optiondata}></OptionCard>
+            <OptionCard
+              optiondata={optiondata}
+              correctAnswer={correctAnswer}></OptionCard>
           ))}
         </div>
       </div>
-      {/* {options.map((optiondata) => (
-        <OptionCard optiondata={optiondata}></OptionCard>
-      ))} */}
     </div>
   );
 };
