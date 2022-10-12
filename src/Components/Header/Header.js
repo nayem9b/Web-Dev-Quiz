@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Reshob from "../../images/Reshob.jpg";
 
 const Header = () => {

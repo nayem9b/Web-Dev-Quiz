@@ -28,7 +28,7 @@ export default function Statistics() {
   const QuizData = loaderData.data;
 
   return (
-    <ResponsiveContainer width='50%' aspect={2}>
+    <ResponsiveContainer width='89%' aspect={2}>
       <BarChart
         width={500}
         height={300}

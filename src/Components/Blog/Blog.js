@@ -1,6 +1,5 @@
 import React from "react";
 import reactRouter from "../../images/reactRouter.jpg";
-import contextAPI from "../../images/contextAPI.png";
 import useRef from "../../images/useRef.jpg";
 import react from "../../images/react.png";
 
@@ -30,11 +29,7 @@ const Blog = () => {
               button and the refresh page while maintaining the correct view of
               the application.
             </p>
-            <div className='flex justify-center'>
-              <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
-                Button
-              </button>
-            </div>
+            <div className='flex justify-center'></div>
           </div>
           <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
             <img
@@ -61,11 +56,7 @@ const Blog = () => {
               component tree without having to pass props down manually at every
               level.
             </p>
-            <div className='flex justify-center'>
-              <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
-                Button
-              </button>
-            </div>
+            <div className='flex justify-center'></div>
           </div>
           <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
             <img
@@ -92,11 +83,7 @@ const Blog = () => {
               re-render when updated. It can be used to access a DOM element
               directly.
             </p>
-            <div className='flex justify-center'>
-              <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
-                Button
-              </button>
-            </div>
+            <div className='flex justify-center'></div>
           </div>
           <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
             <img

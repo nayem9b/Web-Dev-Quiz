@@ -5,9 +5,7 @@ import QuizCard from "../QuizCard/QuizCard";
 const Quizpage = () => {
   const loaderData = useLoaderData();
   const qdata = loaderData.data;
-
-  const { name, id, questions, total } = qdata;
-  console.log(qdata);
+  const { name, questions, total } = qdata;
 
   return (
     <div>

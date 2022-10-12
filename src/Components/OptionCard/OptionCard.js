@@ -1,23 +1,25 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import "./OptionCard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const OptionCard = ({ optiondata, correctAnswer }) => {
-  let [count, setcount] = useState(0);
   const checkAnswer = () => {
     if (optiondata === correctAnswer) {
-      toast.success("You got it Right");
-      setcount(count + 1);
-      console.log(count);
+      toast.success("You got it Right", {
+        theme: "colored",
+        autoClose: 700,
+      });
     } else {
-      toast.error("You got it Wrong");
+      toast.error("You got it Wrong", {
+        theme: "colored",
+        autoClose: 700,
+      });
     }
   };
   return (
     <div>
-      <div className='position form-control flex'>
+      <div className='position form-control flex text-left'>
         {optiondata}
         <label className='label cursor-pointer flex'>
           <span className='radiobox label-text flex'></span>
@@ -28,7 +30,7 @@ const OptionCard = ({ optiondata, correctAnswer }) => {
             checked
             onClick={() => checkAnswer()}
           />
-          <ToastContainer />
+          <ToastContainer theme='light'></ToastContainer>
         </label>
       </div>
     </div>

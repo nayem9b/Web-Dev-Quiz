@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Swal from "sweetalert2";
 const QuizCard = ({ reletedqdata }) => {
   const { question, options, correctAnswer } = reletedqdata;
+  const splitedQuestion = question.split("<p>");
 
   const Toast = Swal.mixin({
     toast: true,
@@ -24,7 +25,9 @@ const QuizCard = ({ reletedqdata }) => {
       <div className=' grid grid-cols-1 my-5 card lg:w-[900px] sm:w-auto md:auto bg-base-100 lg:ml-80  justify-center items-center shadow-xl'>
         <div className='card-body '>
           <div className='flex justify-between'>
-            <h2 className='card-title text-purple-500'>{question}</h2>
+            <h2 className='card-title text-purple-500 text-left'>
+              {splitedQuestion}
+            </h2>
             <button
               onClick={() =>
                 Toast.fire({
